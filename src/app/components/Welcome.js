@@ -8,23 +8,34 @@ const Welcome = () => {
     signInWithPopup(auth, provider);
   };
   return (
-    <main className="welcome">
-      <h2>Welcome to Chat App.</h2>
-      <Image
-        onClick={googleSignIn}
-        src={"/img/logo(3).png"}
-        height={50}
-        width={50}
-        alt="Sign in with Google"
-      />
-      <p>Sign in with Google to chat with with your fellow Frindes.</p>
-      <button className="sign-in">
+    <main className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-sky-100 to-sky-200 dark:from-gray-900 dark:to-gray-800">
+      <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">
+        Welcome to Chat App
+      </h2>
+
+      <div className="mb-6">
         <Image
-          onClick={googleSignIn}
-          src={"/img/btn_google_signin_dark_pressed_web.png"}
+          src="/img/logo(3).png"
+          height={80}
+          width={80}
+          alt="App Logo"
+          className="rounded-full shadow-lg"
+        />
+      </div>
+
+      <p className="text-gray-600 dark:text-gray-300 mb-6 text-center">
+        Sign in with Google to chat with your friends.
+      </p>
+
+      <button
+        onClick={googleSignIn}
+        className="cursor-pointer flex items-center bg-white border border-gray-300 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-600 transition"
+      >
+        <Image
+          src="/img/btn_google_signin_dark_pressed_web.png"
           alt="Sign in with Google"
-          height={100}
-          width={100}
+          height={200}
+          width={200}
         />
       </button>
     </main>
