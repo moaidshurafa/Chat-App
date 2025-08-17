@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import GoogleSignin from "../img/btn_google_signin_dark_pressed_web.png";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase.js";
@@ -27,9 +26,11 @@ const NavBar = () => {
         <button className="sign-in">
           <Image
             onClick={googleSignIn}
-            src={GoogleSignin}
+            src={"/img/btn_google_signin_dark_pressed_web.png"}
             alt="sign in with google"
             type="button"
+            width={50}
+            height={50}
           />
         </button>
       )}

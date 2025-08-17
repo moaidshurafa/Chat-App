@@ -1,6 +1,4 @@
-import GoogleSignin from "../img/btn_google_signin_dark_pressed_web.png";
 import Image from "next/image";
-import Logo from "../img/logo (3).png";
 import { auth } from "../firebase";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
@@ -14,7 +12,7 @@ const Welcome = () => {
       <h2>Welcome to Chat App.</h2>
       <Image
         onClick={googleSignIn}
-        src={Logo}
+        src={"/img/logo(3).png"}
         height={50}
         width={50}
         alt="Sign in with Google"
@@ -23,8 +21,10 @@ const Welcome = () => {
       <button className="sign-in">
         <Image
           onClick={googleSignIn}
-          src={GoogleSignin}
+          src={"/img/btn_google_signin_dark_pressed_web.png"}
           alt="Sign in with Google"
+          height={100}
+          width={100}
         />
       </button>
     </main>
